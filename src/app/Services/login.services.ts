@@ -24,7 +24,7 @@ export class AuthService {
           const token = response.token;
           if (token) {
             localStorage.setItem('currentUser', JSON.stringify({ username: username, token: token }));
-            // this.router.navigate(['/', '']);
+            this.router.navigate(['home']);
             return true;
 
           } else {
@@ -32,6 +32,13 @@ export class AuthService {
           }
         })
       );
+  }
+  private cadastroUrl = 'http://127.0.0.1:8010/cadastrar';
+  
+
+  cadastrar(nm_primeiro: string, nm_ultimo:string, email:string , password: string): Observable<any> {
+    return this.http.post<any>(this.cadastroUrl, { nm_primeiro: nm_primeiro, password: password, nm_ultimo:nm_ultimo, email:email }).pipe(
+      map(response => {console.log(response)}))
   }
 
   logout(): void {
@@ -45,3 +52,4 @@ export class AuthService {
     return currentUser && currentUser.token;
   }
 }
+

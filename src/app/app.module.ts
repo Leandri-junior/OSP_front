@@ -8,13 +8,15 @@ import { FormsModule, ReactiveFormsModule, } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AuthService } from './Services/login.services';
 import { CadastroComponent } from './pages/cadastro/cadastro.component';
+import { HomeComponent } from './pages/home/home.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    CadastroComponent
+    CadastroComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
