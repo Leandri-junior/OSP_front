@@ -33,6 +33,7 @@ margin: 4%;
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      width: 400px;
 
       label {
         margin-bottom: 10px;
@@ -63,7 +64,7 @@ margin: 4%;
         }
 
         &:active{
-          box-shadow: 0 1px 5px 0 gray;
+          box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
         }
       }
     }
@@ -71,7 +72,7 @@ margin: 4%;
     .cadastrar_se{
       width: 80%;
       display: flex;
-      justify-content: end;
+      justify-content: space-between;
       padding-top: 60px;
 
       p{
@@ -93,6 +94,7 @@ margin: 4%;
 }
 
 .footer{
+  padding-top: 40px;
   width: 100%;
   height: auto;
   display: flex;

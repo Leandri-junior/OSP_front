@@ -1,28 +1,24 @@
-// import { Injectable } from '@angular/core';
-// import { CanActivate, Router } from '@angular/router';
-// import { Observable } from 'rxjs';
-// import { AuthService } from './auth.service';
+import { Injectable } from '@angular/core';
+import { CanActivate, Router } from '@angular/router';
+import { Observable } from 'rxjs';
+import { AuthService } from '../Services/login.services';
 
-// @Injectable({
-//   providedIn: 'root'
-// })
-// export class AuthGuard implements CanActivate {
 
-//   constructor(private authService: AuthService, private router: Router) {}
+@Injectable({
+  providedIn: 'root'
+})
+export class AuthGuard implements CanActivate {
 
-//   canActivate(): Observable<boolean> | boolean {
-//     const token = localStorage.getItem('token');
-//     const isAuthenticated = token != null;
+  constructor(private authService: AuthService, private router: Router) {}
 
-//     // Define o estado de autenticação do usuário no serviço de autenticação
-//     this.authService.setAuthenticated(isAuthenticated);
+  canActivate(): Observable<boolean> | boolean {
+    
+    if (!this.authService.isLoggedIn()) {
+      // Se o usuário não estiver autenticado, redireciona para a página de login
+      this.router.navigate(['/login']);
+    }
 
-//     if (!isAuthenticated) {
-//       // Se o usuário não estiver autenticado, redireciona para a página de login
-//       this.router.navigate(['/login']);
-//     }
-
-//     return isAuthenticated;
-//   }
-// }
+    return true;
+  }
+}
 
