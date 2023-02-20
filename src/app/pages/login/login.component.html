@@ -1,0 +1,21 @@
+  <div class='contentInputDados'> 
+    <form  [formGroup]="formulariologin"  class='contentform' (submit)="submitLogin()" >
+        <div class="login-container">
+            <h2>Fazer Login</h2>
+            <div class="form">
+               
+                    <input type="text" placeholder="Matricula" id="matricula" formControlName="matricula" required>
+                
+               
+                    <input type="password"  placeholder="Senha" id="senha"  formControlName="senha" name="senha" required>
+         
+                <button>Entrar</button>
+            </div>
+        </div>
+    </form>
+</div> 
+<div class="footer">
+    <div>
+        <p>powered by: <strong> Oral System Plan</strong> </p>
+    </div>
+</div>
