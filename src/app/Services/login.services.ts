@@ -24,7 +24,7 @@ export class AuthService {
           const token = response.token;
           if (token) {
             localStorage.setItem('currentUser', JSON.stringify({ username: username, token: token }));
-            this.router.navigate(['/', '']);
+            // this.router.navigate(['/', '']);
             return true;
 
           } else {

@@ -33,7 +33,7 @@ export class LoginComponent {
   }
   submitLogin(){
    
-   
+    
     var dadosLogin = this.formulariologin.getRawValue() as LoginModel;
     console.log(dadosLogin)
     this.authService.login(dadosLogin.matricula, dadosLogin.senha).subscribe((response: any) => {

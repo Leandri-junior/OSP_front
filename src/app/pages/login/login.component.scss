@@ -2,7 +2,7 @@
 display: flex;
 justify-content: center;
 align-items: center;
-margin: 10%;
+margin: 4%;
 
 .contentform{
   border-radius: 10px; 
@@ -65,6 +65,24 @@ margin: 10%;
         &:active{
           box-shadow: 0 1px 5px 0 gray;
         }
+      }
+    }
+
+    .cadastrar_se{
+      width: 80%;
+      display: flex;
+      justify-content: end;
+      padding-top: 60px;
+
+      p{
+        font-size: 14px;
+        font-weight: 400;
+
+      }
+
+      a{
+        text-decoration: None;
+        color:#ff6666;
       }
     }
   }
