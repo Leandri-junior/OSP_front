@@ -1,9 +1,13 @@
+
 .contentInputDados{
 display: flex;
 justify-content: center;
 align-items: center;
-margin: 4%;
+margin: 10%;
 
+  @media screen and (max-height: 700px) {
+    margin: 4%;
+  }
 .contentform{
   border-radius: 10px; 
   box-shadow: 0 30px 60px 0 gray;
@@ -11,6 +15,9 @@ margin: 4%;
   height: 450px;
   text-align: center;
   transition: all 0.5s ease-in-out;
+
+  @media screen and (min-height: 800px) {
+  }
   
  
   .login-container {

@@ -42,8 +42,9 @@ export class CadastroComponent {
     var dadosCadastro = this.formulariocadastro.getRawValue() as CadastroModel;
     console.log(dadosCadastro)
     this.authService.cadastrar(dadosCadastro.nm_primeiro, dadosCadastro.nm_ultimo, dadosCadastro.email, dadosCadastro.senha).subscribe((response: any) => {
-     
-      console.log(response);
+      
+        console.log(response.status == true)
+      
     });
   }
 } 

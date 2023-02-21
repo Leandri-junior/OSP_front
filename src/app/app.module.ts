@@ -9,6 +9,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { AuthService } from './Services/login.services';
 import { CadastroComponent } from './pages/cadastro/cadastro.component';
 import { HomeComponent } from './pages/home/home.component';
+import { MenuGeralComponent } from './Components/Menu/menu-geral/menu-geral.component';
+import { MenuLateralComponent } from './Components/Menu/menu-lateral/menu-lateral.component';
+import { MenuBaixoComponent } from './Components/Menu/menu-baixo/menu-baixo.component';
+import { MenuHeaderComponent } from './Components/Menu/menu-header/menu-header.component';
+
 
 
 @NgModule({
@@ -16,7 +21,11 @@ import { HomeComponent } from './pages/home/home.component';
     AppComponent,
     LoginComponent,
     CadastroComponent,
-    HomeComponent
+    HomeComponent,
+    MenuGeralComponent,
+    MenuLateralComponent,
+    MenuBaixoComponent,
+    MenuHeaderComponent
   ],
   imports: [
     BrowserModule,

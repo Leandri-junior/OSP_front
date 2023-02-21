@@ -38,7 +38,16 @@ export class AuthService {
 
   cadastrar(nm_primeiro: string, nm_ultimo:string, email:string , password: string): Observable<any> {
     return this.http.post<any>(this.cadastroUrl, { nm_primeiro: nm_primeiro, password: password, nm_ultimo:nm_ultimo, email:email }).pipe(
-      map(response => {console.log(response)}))
+      map(response => {
+      if (response('status')){
+
+        this.router.navigate(['/login']);
+        return true
+
+    }else{
+      return false
+    }
+   } ))
   }
 
   logout(): void {
