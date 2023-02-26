@@ -13,6 +13,8 @@ import { MenuGeralComponent } from './Components/Menu/menu-geral/menu-geral.comp
 import { MenuLateralComponent } from './Components/Menu/menu-lateral/menu-lateral.component';
 import { MenuBaixoComponent } from './Components/Menu/menu-baixo/menu-baixo.component';
 import { MenuHeaderComponent } from './Components/Menu/menu-header/menu-header.component';
+import { CadastroPacienteComponent } from './pages/cadastro-paciente/cadastro-paciente.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 
@@ -25,7 +27,8 @@ import { MenuHeaderComponent } from './Components/Menu/menu-header/menu-header.c
     MenuGeralComponent,
     MenuLateralComponent,
     MenuBaixoComponent,
-    MenuHeaderComponent
+    MenuHeaderComponent,
+    CadastroPacienteComponent
   ],
   imports: [
     BrowserModule,
@@ -33,6 +36,7 @@ import { MenuHeaderComponent } from './Components/Menu/menu-header/menu-header.c
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    BrowserAnimationsModule,
 
   ],
   providers: [AuthService],

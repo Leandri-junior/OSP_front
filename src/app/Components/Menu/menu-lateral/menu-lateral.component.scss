@@ -1,0 +1,17 @@
+.sidebar{
+    border-right: 1px solid  #ff4d4d;
+    width: 60px;
+    height: 100%;
+    display: flex;
+    background-color:#f5f5f5;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    z-index: 1000;
+    }
+
+    p,strong{
+        margin: 0;
+        padding: 0;
+        border: 0;
+    }
