@@ -1,6 +1,254 @@
+.nome { grid-area: nome; }
+.sobrenome { grid-area: sobrenome; }
+.sexo { grid-area: sexo; }
+.cpf { grid-area: cpf; }
+.rg { grid-area: rg; }
+.dt-nascimento { grid-area: dt-nascimento; }
+.local { grid-area: local; }
+.naturalidade { grid-area: naturalidade; }
+.nome-mae { grid-area: nome-mae; }
+.nome-pai { grid-area: nome-pai; }
+ 
+.cep { grid-area: cep; }
+.rua { grid-area: rua; }
+.numero { grid-area: numero; }
+.complemento { grid-area: complemento; }
+.bairro { grid-area: bairro; }
+.cidade { grid-area: cidade; }
+.estado { grid-area: estado; }
+.pais { grid-area: pais; }
+.botao { grid-area: botao; }
 
-  
-.content{
-    margin-left: 60px;
-    margin-bottom: 35px; 
-}
+    
+    .content_inicial{
+        margin-left: 60px;
+        margin-bottom: 35px; 
+        display: flex;
+        justify-content: center;
+        
+        
+    }
+    
+    .content{
+        width: 1420px;
+        padding:5px ;
+        margin: 15px;
+        border-radius: 5px;
+        padding: 0 40px;
+        background-color: #fff;
+       
+        .div_titulo{
+            width: 1420px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+    
+            h1{
+                font-size: 2.5rem;
+            }
+        }
+    
+        .dadosPessoais, .endereco{
+            display: block;
+            width: 1420px;
+            padding-top: 40px;
+    
+            
+            .tituloPessoais, .tituloEndereco{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            
+            .contentPessoais{
+                .container {
+                    display: grid; 
+                    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
+                    grid-template-rows: 0.5fr 0.5fr 0.5fr; 
+                    gap: 0px 0px; 
+                    grid-template-areas: 
+                      "nome nome nome sobrenome sobrenome sobrenome sexo"
+                      "cpf cpf rg rg dt-nascimento local local"
+                      "naturalidade naturalidade nome-mae nome-mae nome-pai nome-pai .";
+                    align-items: center;
+                    justify-content: space-between;
+            
+                $primary: #11998e;
+                $secondary: #38ef7d;
+                $white: #fff;
+                $gray: #5a5959;
+                .form__group {
+                position: relative;
+                padding: 15px 0 0;
+                margin-top: 10px;
+                width: 100%;
+                }
+    
+                .form__field {
+                font-family: inherit;
+                width: 80%;
+                border: 0;
+                border-bottom: 2px solid $gray;
+                outline: 0;
+                font-size: 1.3rem;
+                color: #5e5d5d;
+                padding: 7px 0;
+                background: transparent;
+                transition: border-color 0.2s;
+    
+                &::placeholder {
+                    color: transparent;
+                }
+    
+                &:placeholder-shown ~ .form__label {
+                    font-size: 1.3rem;
+                    cursor: text;
+                    top: 20px;
+                }
+                }
+    
+                .form__label {
+                position: absolute;
+                top: 0;
+                display: block;
+                transition: 0.2s;
+                font-size: 1rem;
+                color: $gray;
+                }
+    
+                .form__field:focus {
+                ~ .form__label {
+                    position: absolute;
+                    top: 0;
+                    display: block;
+                    transition: 0.2s;
+                    font-size: 1rem;
+                    color: $primary;
+                    font-weight:700;    
+                }
+                padding-bottom: 6px;  
+                font-weight: 700;
+                border-width: 3px;
+                border-image: linear-gradient(to right, $primary,$secondary);
+                border-image-slice: 1;
+                }
+                /* reset input */
+                .form__field{
+                &:required,&:invalid { box-shadow:none; }
+                }
+    /* demo */
+            }}
+        }
+        }
+        .contentEndereco{
+            .container {
+                display: grid; 
+                grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
+                grid-template-rows: 0.5fr 0.5fr 0.5fr; 
+                gap: 0px 0px; 
+                grid-template-areas: 
+                    "cep rua rua rua numero complemento complemento complemento"
+                    "bairro bairro cidade cidade estado estado pais pais"
+                    ". . . . . . botao botao"; 
+                align-items: center;
+                justify-content: space-between;
+        
+            $primary: #11998e;
+            $secondary: #38ef7d;
+            $white: #fff;
+            $gray: #5a5959;
+            .form__group {
+            position: relative;
+            padding: 15px 0 0;
+            margin-top: 10px;
+            width: 100%;
+            }
+    
+            .form__field {
+            font-family: inherit;
+            width: 80%;
+            border: 0;
+            border-bottom: 2px solid $gray;
+            outline: 0;
+            font-size: 1.3rem;
+            color: #5e5d5d;
+            padding: 7px 0;
+            background: transparent;
+            transition: border-color 0.2s;
+    
+            &::placeholder {
+                color: transparent;
+            }
+    
+            &:placeholder-shown ~ .form__label {
+                font-size: 1.3rem;
+                cursor: text;
+                top: 20px;
+            }
+            }
+    
+            .form__label {
+            position: absolute;
+            top: 0;
+            display: block;
+            transition: 0.2s;
+            font-size: 1rem;
+            color: $gray;
+            }
+    
+            .form__field:focus {
+            ~ .form__label {
+                position: absolute;
+                top: 0;
+                display: block;
+                transition: 0.2s;
+                font-size: 1rem;
+                color: $primary;
+                font-weight:700;    
+            }
+            padding-bottom: 6px;  
+            font-weight: 700;
+            border-width: 3px;
+            border-image: linear-gradient(to right, $primary,$secondary);
+            border-image-slice: 1;
+            }
+            /* reset input */
+            .form__field{
+            &:required,&:invalid { box-shadow:none; }
+            }
+    /* demo */
+        }}
+           
+    
+        .botao{
+            display: grid;
+            grid-template-columns:200px ;
+            justify-content: end;
+            padding: 15px 0;
+           
+            button {
+            background: #ff4d4d;;
+            border-radius: 999px;
+            box-shadow: #ff4d4d 0 10px 20px -10px;
+            box-sizing: border-box;
+            color: #FFFFFF;
+            cursor: pointer;
+            font-family: Inter,Helvetica,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Noto Color Emoji","Segoe UI Symbol","Android Emoji",EmojiSymbols,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans",sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 24px;
+            opacity: 1;
+            outline: 0 solid transparent;
+            padding: 8px 18px;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            width: fit-content;
+            word-break: break-word;
+            border: 0;
+            }
+        }    
+    
+

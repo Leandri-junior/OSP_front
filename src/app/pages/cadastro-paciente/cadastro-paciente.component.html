@@ -1,9 +1,60 @@
 <div class="menu">
     <app-menu-geral></app-menu-geral>
 </div>
-<div class="content">
+<div class="content_inicial">
+    <form class="content" [formGroup]="cadastroPaciente"  (submit)="submitPaciente()">
+        <div class='div_titulo'>
+            <h1>Cadastrar novo paciente</h1>
+        </div>
+        <div class="dadosPessoais">
+            <div class="tituloPessoais">
+                <h1>Dados pessoais</h1>
+            </div>
+            
+            <div class="contentPessoais">
+                <div class="container">
+                <div class="form__group field nome"><input class="form__field" type="text" placeholder="Nome" id="nome"><label for="name" class="form__label">Nome</label></div>
+                <div class="form__group field sobrenome"><input class="form__field" type="text" placeholder="Sobrenome" id="sobrenome"><label for="name" class="form__label">Sobrenome</label></div>
+                <div class="form__group field sexo">
+                    <select id="genero" class="form__field" name="genero">
+                        <option class="form__label" value="" disabled selected><span>Genero</span></option>
+                        <option class="form__label" value="masculino">Masculino</option>
+                        <option class="form__label" value="feminino">Feminino</option>
+                        <option class="form__label" value="outro">Outro</option>
+                    </select>
+                    </div>
+                <div class="form__group field cpf "><input class="form__field" type="text" placeholder="CPF" id="cpf"><label for="name" class="form__label">CPF</label></div>
+                <div class="form__group field rg"><input class="form__field" type="text" placeholder="RG" id="rg"><label for="name" class="form__label">RG</label></div>
+                <div class="form__group field dt-nascimento"><input class="form__field" type="text" placeholder="Data de nascimento" id="data_nascimento"><label for="name" class="form__label">Data de nascimento</label></div>
+                <div class="form__group field local"><input class="form__field" type="text" placeholder="Local de nascimento" id="local_nascimento"><label for="name" class="form__label">Local de nascimento</label></div>
+                <div class="form__group field naturalidade"><input class="form__field" type="text" placeholder="Naturalidade" id="naturalidade"><label for="name" class="form__label">Naturalidade</label></div>
+                <div class="form__group field nome-mae"><input class="form__field" type="text" placeholder="Nome da mãe" id="nome_mae"><label for="name" class="form__label">Nome da mãe</label></div>
+                <div class="form__group field nome-pai"><input class="form__field" type="text" placeholder="Nome do pai" id="nome_pai"><label for="name" class="form__label">Nome do pai</label></div>
+            </div>
+            
+        </div>
+        </div>
+        <div class ='endereco'>
+            <div class="tituloEndereco">
+                <h1>Endereço</h1>
+            </div>
 
-<div>
-    aaaaa
-</div>
+            <div class="contentEndereco" >
+                <div class="container" [formGroup]="cadastroPaciente">
+                <div class="form__group field cep"><input class="form__field" type="text" placeholder="cep" id="cep"><label for="cep" class="form__label">CPF</label></div>
+                <div class="form__group field rua"><input class="form__field" type="text" placeholder="rua" id="rua"><label for="rua" class="form__label">Rua</label></div>
+                <div class="form__group field numero"><input class="form__field" type="text" placeholder="numero" id="numero"><label for="numero" class="form__label">Numero</label></div>
+                <div class="form__group field complemento"><input class="form__field" type="text" placeholder="complemento" id="complemento"><label for="complemento" class="form__label">Complemento</label></div>
+                <div class="form__group field bairro"><input class="form__field" type="text" placeholder="bairro" id="bairro"><label for="bairro" class="form__label">Bairro</label></div>
+                <div class="form__group field cidade"><input class="form__field" type="text" placeholder="cidade" id="cidade"><label for="cidade" class="form__label">Cidade</label></div>
+                <div class="form__group field estado"><input class="form__field" type="text" placeholder="estado" id="estado"><label for="estado" class="form__label">Estado</label></div>
+                <!-- <div class="form__group field pais"><input class="form__field" type="text" placeholder="pais" id="pais"><label for="pais" class="form__label">Pais</label></div> -->
+            </div>
+            </div>
+        </div>
+
+        <div class="botao">
+            <button>Salvar paciente</button>
+        </div>
+    </form>
 </div>

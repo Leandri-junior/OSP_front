@@ -18,6 +18,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +29,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MenuLateralComponent,
     MenuBaixoComponent,
     MenuHeaderComponent,
-    CadastroPacienteComponent
+    CadastroPacienteComponent,
+    
   ],
   imports: [
     BrowserModule,

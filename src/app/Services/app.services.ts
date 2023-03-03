@@ -19,17 +19,14 @@ export class AppServices {
           
         })
       };
-    login(dados:any) {
-        return this.http.post<any>(this.urlApi + "login", dados)
-    }
-
-    getTodolist(){
-        return this.http.get<any>(this.urlApi + "ajax/get_lista")
+   
+    get(url:any){
+        return this.http.get<any>(this.urlApi + url)
     }
 
 
-    postDados(dados:any){
-        return this.http.post<any>(this.urlApi + "ajax/salvar_dados", dados)
+    post(url:any, dados:any){
+        return this.http.post<any>(this.urlApi + url, dados)
     }
 
 }

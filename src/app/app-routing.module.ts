@@ -16,7 +16,7 @@ const routes: Routes = [
   {path:"login",component:LoginComponent},
   {path:'cadastrar',component:CadastroComponent },
   {path:'home',component:HomeComponent, canActivate:[AuthGuard]},
-  { path:'cadastrar/paciente', component:CadastroPacienteComponent, canActivate:[AuthGuard]},
+  { path:'paciente/cadastrar', component:CadastroPacienteComponent, canActivate:[AuthGuard]},
 ];
 
 @NgModule({
