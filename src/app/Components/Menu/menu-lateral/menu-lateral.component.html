@@ -1,11 +1,12 @@
-<div class="sidebar">
-    <div class="sidebar-content">
-        <div class ='item'>
-            <button id="buttonlink"> 
-                <div class="logo-item"><img src="../../../../assets/media/logo.png" alt=""></div>
-                <div class="nome-item">Paciente</div>
-                <div class="icon-down"><img src="../../../../assets/media/icons/flexa_esquerda.svg" alt=""></div>
-            </button>
+    <div class="sidebar">
+        <div class="sidebar-content">
+            <div class ='item' *ngFor = 'let item of data'>
+                <button id="buttonlink" (click)="linkbutton(item.rota)"> 
+                    <div class="logo-item"><img src="{{item.imagem}}" alt=""></div>
+                    <div class="nome-item">{{item.nome}}</div>
+                    <div class="icon-down"><img src="{{item.icon_down}}" alt=""></div>
+                </button>
+            </div>
+            
         </div>
     </div>
-</div>

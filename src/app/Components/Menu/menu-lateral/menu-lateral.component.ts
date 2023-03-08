@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-menu-lateral',
@@ -6,20 +7,40 @@ import { Component } from '@angular/core';
   styleUrls: ['./menu-lateral.component.scss']
 })
 
-// var item_menu = '<div class="sidebar">'
-//                   '<div class="sidebar-content">'
-//                       '<div class ="item">'
-//                           '<button id="buttonlink"> '
-//                               '<div class="logo-item"><img src="../../../../assets/media/logo.png" alt=""></div>'
-//                               '<div class="nome-item">Paciente</div>'
-//                               '<div class="icon-down"><img src="../../../../assets/media/icons/flexa_esquerda.svg" alt=""></div>'
-//                          '</button>'
-//                       '</div>'
-//                   '</div>'
-//                   '</div>'
-
-                
-
 export class MenuLateralComponent {
 
+
+
+  data: Array<any>;constructor(private router: Router){  
+    this.data = [
+      {
+        rota: 'home/',
+        nome: 'Dashboard',
+        imagem: 'assets/media/logo.png',
+        icon_down: 'assets/media/icons/flexa_esquerda.svg',
+      },
+      {
+      rota: 'paciente/cadastrar',
+      nome: 'Paciente',
+      imagem: 'assets/media/logo.png',
+      icon_down: 'assets/media/icons/flexa_esquerda.svg',
+      },
+      {
+        rota: '',
+        nome: 'Sem Rota',
+        imagem: 'assets/media/logo.png',
+        icon_down: 'assets/media/icons/flexa_esquerda.svg',
+      },
+  ]  
+  }
+  linkbutton(rota:any){
+      if (rota){
+        return this.router.navigate([rota]);
+      }else{
+        return true
+      }
+  }
+
+      
 }
+          
